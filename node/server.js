@@ -18,11 +18,11 @@ app.post('/index', (req, res) => {
     var answer = "Wrong answer";
     res.statusCode = 403;
 
-    console.log("Request: " + req.body);
+    console.log("Request: " + JSON.stringify(req.body));
     if (req) {
         if (req.body) {
             const answer = req.body.textbox;
-            console.log("Request: " + req.body);
+            console.log("Request: " + JSON.stringify(req.body.textbox));
             if (answer == "150") {
                 success = true;
                 answer = "RFC1035-3.3.14";
