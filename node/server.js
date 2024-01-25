@@ -1,22 +1,28 @@
 const express = require('express');
 const cors = require('cors');
-const bodyParser = require('body-parser');
 
 const app = express();
 const port = 3000;
 
-app.post('/index', cors(), (req, res) => {
-    console.log(`got a request`);
+var rawBodyHandler = function (req, res, buf, encoding) {
+    if (buf && buf.length) {
+        req.rawBody = buf.toString(encoding || 'utf8');
+        console.log('Raw body: ' + req.rawBody);
+    }
+}
 
-    console.log("data is: " + req.body);
-    const answer = req.body.textbox;
-    console.log("anwqer is: " + answer);
+// app.post('/index', cors(), (req, res) => {
+//     console.log(`got a request`);
 
-    // Handle the POST request here
-    res.send('RFC1035-3.3.14');
-});
+//     console.log("data is: " + req.body);
+//     const answer = req.body.textbox;
+//     console.log("anwqer is: " + answer);
 
-app.use(bodyParser.json());
+//     // Handle the POST request here
+//     res.send('RFC1035-3.3.14');
+// });
+
+app.use(express.json());
 
 app.use(
     cors({
