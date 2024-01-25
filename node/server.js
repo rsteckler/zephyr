@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const bodyParser = require('body-parser');
 
 const app = express();
 const port = 3000;
@@ -14,6 +15,8 @@ app.post('/index', cors(), (req, res) => {
     // Handle the POST request here
     res.send('RFC1035-3.3.14');
 });
+
+app.use(bodyParser.json());
 
 app.use(
     cors({
