@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var value = textbox.value;
         
         var xhr = new XMLHttpRequest();
-        xhr.open('POST', 'api.karmahunt.com/index', true);
+        xhr.open('POST', 'https://api.karmahunt.com/index', true);
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
         xhr.onreadystatechange = function() {
             if (xhr.readyState === 4 && xhr.status === 200) {
