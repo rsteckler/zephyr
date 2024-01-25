@@ -7,5 +7,6 @@ git pull
 cd node
 npm install
 cd ..
+pm2 restart all
 
 
