@@ -13,14 +13,23 @@ app.use(
 );
 
 app.post('/index', (req, res) => {
-    console.log(`got a request`);
 
-    console.log("data is: " + req.body);
-    const answer = req.body.textbox;
-    console.log("anwqer is: " + answer);
+    var success = false;
+    var answer = "Wrong answer";
+    res.statusCode = 403;
 
-    // Handle the POST request here
-    res.send('RFC1035-3.3.14');
+    if (req) {
+        if (req.body) {
+            const answer = req.body.textbox;
+            if (answer == "150") {
+                success = true;
+                answer = "RFC1035-3.3.14";
+                res.statusCode = 200;
+            }
+        }
+    }
+
+    res.send(answer);
 });
 
 // Start the server

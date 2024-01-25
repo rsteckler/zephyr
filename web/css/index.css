@@ -17,7 +17,7 @@ button {
     width: 100%;
 }
 
-#answerShowHide {
+#answerShowHideCorrect {
     width: 60%;
     visibility: hidden;
 }
