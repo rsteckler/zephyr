@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         var xhr = new XMLHttpRequest();
         xhr.open('POST', 'https://api.karmahunt.net/index', true);
+        xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
         xhr.onreadystatechange = function() {
             if (xhr.readyState === 4 && xhr.status === 200) {

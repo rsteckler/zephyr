@@ -3,7 +3,7 @@ const cors = require('cors');
 const app = express();
 const port = 3000;
 
-app.post('/index', (req, res) => {
+app.post('/index', cors(), (req, res) => {
     console.log(`got a request`);
 
     // Handle the POST request here
