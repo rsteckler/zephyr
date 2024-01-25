@@ -9,6 +9,13 @@ app.post('/index', (req, res) => {
     res.send('Received POST request');
 });
 
+app.use(
+    cors({
+        credentials: true,
+        origin: "https://karmahunt.net",
+    })
+);
+
 // Start the server
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
