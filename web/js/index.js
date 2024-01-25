@@ -18,6 +18,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 divAnswer.style.visibility = 'visible';
             }
         };
-        xhr.send('{textbox: "' + textbox.value + '"}');
+        xhr.send('{"textbox": "' + textbox.value + '"}');
     });
 });
