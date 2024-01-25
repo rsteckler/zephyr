@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 var spanAnswer = document.querySelector('#answer'); // Replace 'span' with the appropriate selector for your HTML
                 spanAnswer.textContent = responseText;
                 var divAnswer = document.querySelector('#answerShowHide'); // Replace 'span' with the appropriate selector for your HTML
-                divAnswer.setAttribute('visbility', 'visible');
+                divAnswer.style.visibility = 'visible';
             }
         };
         xhr.send('textbox=' + encodeURIComponent(value));
