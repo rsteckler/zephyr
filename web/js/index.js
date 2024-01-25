@@ -13,8 +13,12 @@ document.addEventListener('DOMContentLoaded', function() {
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
         xhr.onreadystatechange = function() {
             if (xhr.readyState === 4 && xhr.status === 200) {
-                // Handle successful response
-                console.log(xhr.responseText);
+                var responseText = xhr.responseText;
+                var spanAnswer = document.querySelector('answer'); // Replace 'span' with the appropriate selector for your HTML
+                spanAnswer.textContent = responseText;
+                var divAnswer = document.querySelector('answerShowHide'); // Replace 'span' with the appropriate selector for your HTML
+                divAnswer.setAttribute('visbility', 'visible');
+
             }
         };
         xhr.send('textbox=' + encodeURIComponent(value));

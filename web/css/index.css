@@ -16,3 +16,6 @@ button {
     width: 100%;
 }
 
+#answerShowHide {
+    visibility: hidden;
+}

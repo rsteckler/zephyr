@@ -7,7 +7,7 @@ app.post('/index', cors(), (req, res) => {
     console.log(`got a request`);
 
     // Handle the POST request here
-    res.send('Received POST request');
+    res.send('RFC1035-3.3.14');
 });
 
 app.use(
