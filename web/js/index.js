@@ -5,12 +5,10 @@ document.addEventListener('DOMContentLoaded', function() {
     form.addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent form submission
         
-        var value = textbox.value;
-        
         var xhr = new XMLHttpRequest();
         xhr.open('POST', 'https://api.karmahunt.net/index', true);
         xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
-        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.onreadystatechange = function() {
             if (xhr.readyState === 4 && xhr.status === 200) {
                 var responseText = xhr.responseText;
@@ -20,6 +18,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 divAnswer.style.visibility = 'visible';
             }
         };
-        xhr.send('textbox=' + encodeURIComponent(value));
+        xhr.send('{textbox: "' + textbox.value + '"}');
     });
 });
