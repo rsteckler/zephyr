@@ -11,16 +11,16 @@ var rawBodyHandler = function (req, res, buf, encoding) {
     }
 }
 
-// app.post('/index', cors(), (req, res) => {
-//     console.log(`got a request`);
+app.post('/index', cors(), (req, res) => {
+    console.log(`got a request`);
 
-//     console.log("data is: " + req.body);
-//     const answer = req.body.textbox;
-//     console.log("anwqer is: " + answer);
+    console.log("data is: " + req.body);
+    const answer = req.body.textbox;
+    console.log("anwqer is: " + answer);
 
-//     // Handle the POST request here
-//     res.send('RFC1035-3.3.14');
-// });
+    // Handle the POST request here
+    res.send('RFC1035-3.3.14');
+});
 
 app.use(express.json());
 
