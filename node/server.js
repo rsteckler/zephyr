@@ -4,14 +4,15 @@ const cors = require('cors');
 const app = express();
 const port = 3000;
 
-var rawBodyHandler = function (req, res, buf, encoding) {
-    if (buf && buf.length) {
-        req.rawBody = buf.toString(encoding || 'utf8');
-        console.log('Raw body: ' + req.rawBody);
-    }
-}
+app.use(express.json());
+app.use(
+    cors({
+        credentials: true,
+        origin: "https://karmahunt.net",
+    })
+);
 
-app.post('/index', cors(), (req, res) => {
+app.post('/index', (req, res) => {
     console.log(`got a request`);
 
     console.log("data is: " + req.body);
@@ -21,15 +22,6 @@ app.post('/index', cors(), (req, res) => {
     // Handle the POST request here
     res.send('RFC1035-3.3.14');
 });
-
-app.use(express.json());
-
-app.use(
-    cors({
-        credentials: true,
-        origin: "https://karmahunt.net",
-    })
-);
 
 // Start the server
 app.listen(port, () => {
