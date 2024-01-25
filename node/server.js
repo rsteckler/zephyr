@@ -6,7 +6,7 @@ const port = 3000;
 app.post('/index', cors(), (req, res) => {
     console.log(`got a request`);
 
-    console.log("data is: " + req.);
+    console.log("data is: " + req.body);
     const answer = req.body.textbox;
     console.log("anwqer is: " + answer);
 
