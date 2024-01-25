@@ -15,24 +15,24 @@ app.use(
 app.post('/index', (req, res) => {
 
     var success = false;
-    var answer = "Wrong answer";
+    var response = "Wrong answer";
     res.statusCode = 403;
 
     console.log("Request: " + JSON.stringify(req.body));
     if (req) {
         if (req.body) {
             const answer = req.body.textbox;
-            console.log("Request: " + JSON.stringify(req.body.textbox));
+            console.log("Attempt: " + JSON.stringify(answer));
             if (answer == "150") {
                 success = true;
-                answer = "RFC1035-3.3.14";
+                response = "RFC1035-3.3.14";
                 res.statusCode = 200;
-                console.log("Correct");
+                console.log("Correct Answer");
             }
         }
     }
 
-    res.send(answer);
+    res.send(response);
 });
 
 // Start the server
