@@ -14,16 +14,3 @@ div {
     color: white;
 }
 
-button {
-    width: 100%;
-}
-
-#answerShowHideCorrect {
-    width: 60%;
-    margin-left: 20%;
-    visibility: hidden;
-}
-
-.hardToRead {
-    color: #222;
-}
