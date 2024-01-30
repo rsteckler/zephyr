@@ -6,7 +6,12 @@ import cors from "cors";
 const app = express();
 const port = 5174;
 app.use(bodyParser.json());
-app.use(cors());
+app.use(
+  cors({
+      credentials: true,
+      origin: "https://gpt.karmahunt.net",
+  })
+);
 
 const configuration = new Configuration({
   organization: "org-x3qszm3MpE7aXwUGfq3A2p8I",
