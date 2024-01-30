@@ -19,7 +19,7 @@ function App() {
 
     setMessage("");
 
-    fetch("http://localhost:8000/", {
+    fetch("https://gptapi.karmahunt.net/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
