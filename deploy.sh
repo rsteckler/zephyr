@@ -7,6 +7,11 @@ git pull
 cd node
 npm install
 cd ..
+cd gpt/backend
+npm install
+cd ../frontend
+npm install
+cd ../..
 pm2 restart all
 
 
