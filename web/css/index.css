@@ -22,3 +22,7 @@ button {
     margin-left: 20%;
     visibility: hidden;
 }
+
+.hardToRead {
+    color: #222;
+}
