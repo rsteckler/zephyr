@@ -1141,8 +1141,10 @@ export function Adventure_Run() {
     gameDifficultyRight = switches.right
 
     // Reset switch
-    if ((gameState != GAMESTATE_WIN) && switchReset && !reset)
+    if ((gameState != GAMESTATE_WIN) && switchReset )
     {
+        reset = true;
+
         objectBall.room = 0x11                 // Put us in the yellow castle
         objectBall.x = 0x50*2                  //
         objectBall.y = 0x20*2                  //
@@ -1781,6 +1783,10 @@ function PrintDisplay()
     // Draw any objects in the room
     //
     DrawObjects(displayedRoom)
+
+    if (gameState == GAMESTATE_WIN) {
+        Platform_PaintPixel(0, 0, 0, 8, 32, 8, 8);
+    }
 }
 
 function PickupPutdown()
