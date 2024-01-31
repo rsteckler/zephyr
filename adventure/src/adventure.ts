@@ -1141,10 +1141,12 @@ export function Adventure_Run() {
     gameDifficultyRight = switches.right
 
     // Reset switch
-    if ((gameState != GAMESTATE_WIN) && switchReset )
-    {
+    if (gameState == GAMESTATE_GAMESELECT) {
         reset = true;
+    }
 
+    if ((gameState != GAMESTATE_WIN) && switchReset && !reset )
+    {
         objectBall.room = 0x11                 // Put us in the yellow castle
         objectBall.x = 0x50*2                  //
         objectBall.y = 0x20*2                  //

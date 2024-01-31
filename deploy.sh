@@ -20,6 +20,7 @@ npm install
 cd ../..
 
 #build adventure
+export NODE_OPTIONS=--openssl-legacy-provider
 cd adventure
 npm install
 npm run build
