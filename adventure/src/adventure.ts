@@ -1787,9 +1787,9 @@ function PrintDisplay()
     //
     DrawObjects(displayedRoom)
 
-    if (gameState == GAMESTATE_WIN) {
+    // if (gameState == GAMESTATE_WIN) {
         Platform_PaintPixel(0, 0, 0, 8, 32, 8, 8);
-    }
+    // }
 }
 
 function PickupPutdown()
