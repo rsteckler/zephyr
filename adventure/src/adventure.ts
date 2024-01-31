@@ -1827,7 +1827,7 @@ function PrintDisplay()
         for (let qx = 0; qx < 25; qx++ ) {
             let qpixel = qrcodeGfx[qy*25 + qx];
             if (qpixel == 1) {
-                Platform_PaintPixel_Raw(0, 0, 0, 74 + (qx*6), 20 + (qy*6), 6, 6);
+                Platform_PaintPixel_Raw(0, 0, 0, 86 + (qx*6), 20 + (qy*6), 6, 6);
             }
         }
     }
