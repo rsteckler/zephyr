@@ -130,7 +130,7 @@ export function Platform_PaintPixel_Raw(r: number, g: number, b: number, x: numb
   height = height ? height : 1
 
   ctx.fillStyle = 'rgba(' + r + ',' + g + ',' + b + ',1)'
-  ctx.fillRect(x, canvas.height - y + 8, width, height)
+  ctx.fillRect(x, canvas.height - y - 8, width, height)
 
 }
 
