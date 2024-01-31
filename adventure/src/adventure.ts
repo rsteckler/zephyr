@@ -1141,6 +1141,7 @@ export function Adventure_Run() {
     gameDifficultyRight = switches.right
 
     // Reset switch
+    console.log("run: " +  gameState + " " + reset + " " + switchReset + " " + select + " " + switchSelect);
     if (gameState == GAMESTATE_GAMESELECT) {
         reset = true;
     }
