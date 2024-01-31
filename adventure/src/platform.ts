@@ -55,7 +55,7 @@ export function start() {
   const keyCodeLeft = 37
   const keyCodeRight = 39
   const keyCodeSpace = 32
-  window.onkeydown = e => {
+  window.onkeydown = (e: KeyboardEvent) => {
     switch(e.key) {
       case '1':
         keyReset = true
@@ -82,7 +82,7 @@ export function start() {
         break
     }
   }
-  window.onkeyup = e => {
+  window.onkeyup = (e: KeyboardEvent) => {
     switch(e.key) {
       case '1':
         keyReset = false
