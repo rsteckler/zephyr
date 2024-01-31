@@ -22,6 +22,7 @@
 
 import * as CONSTS from './constants'
 import {Platform_PaintPixel} from './platform'
+import {Platform_PaintPixel_Raw} from './platform'
 import {Platform_ReadJoystick} from './platform'
 import {Platform_ReadResetSwitch} from './platform'
 import {Platform_ReadSelectSwitch} from './platform'
@@ -1788,7 +1789,7 @@ function PrintDisplay()
     DrawObjects(displayedRoom)
 
     // if (gameState == GAMESTATE_WIN) {
-        Platform_PaintPixel(0, 0, 0, 8, 32, 8, 8);
+        Platform_PaintPixel_Raw(255, 0, 0, 0, 0, 8, 8);
     // }
 }
 

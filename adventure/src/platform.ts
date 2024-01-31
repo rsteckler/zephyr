@@ -124,6 +124,18 @@ export function Platform_PaintPixel(r: number, g: number, b: number, x: number, 
 
 }
 
+export function Platform_PaintPixel_Raw(r: number, g: number, b: number, x: number, y: number, width: number, height: number) {
+
+  width = width ? width : 1
+  height = height ? height : 1
+
+  ctx.fillStyle = 'rgba(' + r + ',' + g + ',' + b + ',1)'
+  ctx.transform(0, 0, 0, 0, 0, canvas.height)
+  ctx.fillRect(x, y, width, height)
+  ctx.transform(1, 0, 0, -1, 0, canvas.height)
+
+}
+
 export function Platform_ReadJoystick(joystick: JOYSTICK) {
   joystick.left = keyLeft
   joystick.up = keyUp
