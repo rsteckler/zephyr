@@ -25,10 +25,15 @@ const getLeaderboard = function () {
 const addLeader = function (name) {
     AWS.config.update(config.aws_remote_config);
     const docClient = new AWS.DynamoDB.DocumentClient();
+    
+    const start = new Date(2024, 2, 1, 9, 0, 0, 0);
+    const now = new Date();
+    const delta = now - start;
+        
     const Item = { };
     Item.id = uuid.v1();
     Item.name = name;
-    Item.timestamp = new Date();
+    Item.timeDelta = delta
     var params = {
         TableName: config.aws_table_name,
         Item: Item
