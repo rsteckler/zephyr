@@ -2,7 +2,7 @@ const rankingsBody = document.querySelector("#rankings > tbody");
 
 function loadRankings () {
     const request = new XMLHttpRequest();
-
+    request.setRequestHeader('Access-Control-Allow-Origin', '*');
     request.open("get", "https://api.karmahunt.net/leaders");
     request.onload = () => {
         try {
