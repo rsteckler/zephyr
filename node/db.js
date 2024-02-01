@@ -11,11 +11,15 @@ const getLeaderboard = function () {
         TableName: config.aws_table_name
     };
 
+    console.log("Scanning Leaderboard table.");
+
     docClient.scan(params, function (err, data) {
 
         if (err) {
             console.log(err)
         } else {
+            console.log("Got Leaderboard table.");
+            console.log(data);
             const { Items } = data;
             return Items;
         }
