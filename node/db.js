@@ -2,7 +2,7 @@ const AWS = require('aws-sdk');
 const config = require('./awsconfig.js');
 const uuid = require('uuid');
 
-const getLeaderboard = function () {
+const getLeaderboard = function (res) {
     AWS.config.update(config.aws_remote_config);
 
     const docClient = new AWS.DynamoDB.DocumentClient();
@@ -19,7 +19,7 @@ const getLeaderboard = function () {
             console.log(err)
         } else {
             console.log("Got Leaderboard table.");
-            return data;
+            res.send(data);
         }
     });
 }
