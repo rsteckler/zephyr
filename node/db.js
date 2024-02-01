@@ -19,8 +19,7 @@ const getLeaderboard = function () {
             console.log(err)
         } else {
             console.log("Got Leaderboard table.");
-            const { Items } = data;
-            return Items;
+            return data;
         }
     });
 }
