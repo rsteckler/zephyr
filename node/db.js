@@ -1,6 +1,6 @@
 const AWS = require('aws-sdk');
 const config = require('./awsconfig.js');
-import { v4 as uuidv4 } from "uuid";
+const uuid = require('uuid');
 
 const getLeaderboard = function () {
     AWS.config.update(config.aws_remote_config);
@@ -26,7 +26,7 @@ const addLeader = function (name) {
     AWS.config.update(config.aws_remote_config);
     const docClient = new AWS.DynamoDB.DocumentClient();
     const Item = { };
-    Item.id = uuidv4();
+    Item.id = uuid.v1();
     Item.name = name;
     Item.timestamp = now();
     var params = {
