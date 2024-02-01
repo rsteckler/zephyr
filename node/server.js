@@ -43,7 +43,7 @@ app.post('/addleader', (req, res) => {
     if (req) {
         if (req.body) {
             const name = req.body.textbox;
-            console.log("leader name: " + JSON.stringify(answer));
+            console.log("leader name: " + JSON.stringify(name));
             db.addLeader(name);                
             response = "ok";
         }
