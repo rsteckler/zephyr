@@ -3,7 +3,7 @@ const rankingsBody = document.querySelector("#rankings > tbody");
 function loadRankings () {
     const request = new XMLHttpRequest();
 
-    request.open("get", "https://codepen.io/imisterk/pen/MLgwOa.js");
+    request.open("get", "https://api.karmahunt.net/leaders");
     request.onload = () => {
         try {
             const json = JSON.parse(request.responseText);
