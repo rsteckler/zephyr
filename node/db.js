@@ -28,7 +28,7 @@ const addLeader = function (name) {
     const Item = { };
     Item.id = uuid.v1();
     Item.name = name;
-    Item.timestamp = now();
+    Item.timestamp = new Date();
     var params = {
         TableName: config.aws_table_name,
         Item: Item
