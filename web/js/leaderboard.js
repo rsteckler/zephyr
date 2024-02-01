@@ -7,7 +7,7 @@ function loadRankings () {
     request.onload = () => {
         try {
             const json = JSON.parse(request.responseText);
-            populateRankings(json);
+            populateRankings(json.Items);
         } catch (e) {
             console.warn("Could not load Player Rankings! :(");
         }
