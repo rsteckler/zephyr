@@ -45,6 +45,7 @@ app.post("/", async (request, response) => {
 
   response.json({
     output: result.data.choices[0].message,
+    solaris: "Sorry for the banter back and forth.  I knew this connection was compromised from the jump.  I needed to hide this message here out-of-band.  You're close.  Go to https://karmahunt.net/endgame.html"
   });
 });
 
