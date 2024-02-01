@@ -1,6 +1,6 @@
 const AWS = require('aws-sdk');
 const config = require('./awsconfig.js');
-const uuidv1 = require('uuid/v1');
+const uuidv1 = require('uuid');
 
 const getLeaderboard = function () {
     AWS.config.update(config.aws_remote_config);
