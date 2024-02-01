@@ -19,7 +19,6 @@ const getLeaderboard = function () {
             console.log(err)
         } else {
             console.log("Got Leaderboard table.");
-            console.log(data);
             const { Items } = data;
             return Items;
         }
