@@ -53,6 +53,13 @@ app.post('/addleader', (req, res) => {
     res.send(response);
 });
 
+app.get('/leaders', (req, res) => {
+
+    console.log("leaders Request: " + JSON.stringify(req.body));
+    var leaders = db.getLeaderboard();                
+    res.statusCode = 200;
+    res.send(leaders);
+});
 
 // Start the server
 app.listen(port, () => {
