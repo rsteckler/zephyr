@@ -22,11 +22,13 @@ const getLeaderboard = function () {
     });
 }
 
-const addLeader = function (req, res) {
+const addLeader = function (name) {
     AWS.config.update(config.aws_remote_config);
     const docClient = new AWS.DynamoDB.DocumentClient();
-    const Item = { ...req.body };
+    const Item = { };
     Item.id = uuidv1();
+    Item.name = name;
+    Item.timestamp = now();
     var params = {
         TableName: config.aws_table_name,
         Item: Item
@@ -35,21 +37,14 @@ const addLeader = function (req, res) {
     // Call DynamoDB to add the item to the table
     docClient.put(params, function (err, data) {
         if (err) {
-            res.send({
-                success: false,
-                message: err
-            });
+            console.log(err);
         } else {
-            res.send({
-                success: true,
-                message: 'Added movie',
-                movie: data
-            });
+            console.log("added leader: " + data);
         }
     });
 }
 
 module.exports = {
-    getMovies,
-    addMovie
+    getLeaderboard,
+    addLeader
 }

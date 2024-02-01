@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const db = require("./db.js");
 
 const app = express();
 const port = 3000;
@@ -34,6 +35,24 @@ app.post('/index', (req, res) => {
 
     res.send(response);
 });
+
+app.post('/addleader', (req, res) => {
+
+    var response = "";
+    console.log("addleader Request: " + JSON.stringify(req.body));
+    if (req) {
+        if (req.body) {
+            const name = req.body.textbox;
+            console.log("leader name: " + JSON.stringify(answer));
+            db.addLeader(name);                
+            response = "ok";
+        }
+    }
+
+    res.statusCode = 200;
+    res.send(response);
+});
+
 
 // Start the server
 app.listen(port, () => {
