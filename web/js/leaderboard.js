@@ -1,4 +1,3 @@
-const rankingsBody = document.querySelector("#rankings > tbody");
 
 function loadRankings () {
     const request = new XMLHttpRequest();
@@ -18,6 +17,8 @@ function loadRankings () {
 
 function populateRankings (json) {
     // Populate Leaderboard
+    const rankingsBody = document.querySelector("#rankings > tbody");
+
     json.forEach((row) => {
         const tr = document.createElement("tr");
 
