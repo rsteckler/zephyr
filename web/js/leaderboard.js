@@ -45,7 +45,7 @@ function populateRankings (json) {
         timeString += minutes + "m ";
         timeDelta -=  minutes * 60;
 
-        const seconds = timeDelta;
+        const seconds = Math.floor(timeDelta);
         timeString += seconds + "s";
 
         tdTime.textContent = timeString;
