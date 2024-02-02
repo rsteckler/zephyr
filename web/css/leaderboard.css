@@ -1,3 +1,8 @@
+body {
+    background:#1a1a1a;
+    color:white;
+    font-family: 'Roboto', sans-serif;
+  }
 
   /* Ladder Navigation */
     #leaderboard {
