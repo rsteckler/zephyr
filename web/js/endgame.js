@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.onreadystatechange = function() {
             if (xhr.readyState === 4 && xhr.status === 200) {
-                window.location.href = "leaderboard.js";
+                window.location.href = "leaderboard.html";
             } 
         };
         xhr.send('{"textbox": "' + textbox.value + '"}');
