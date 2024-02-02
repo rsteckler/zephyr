@@ -21,11 +21,15 @@ function populateRankings (json) {
     json.forEach((row) => {
         const tr = document.createElement("tr");
 
-        row.forEach((cell) => {
-            const td = document.createElement("td");
-            td.textContent = cell;
-            tr.appendChild(td);
-        });
+        const tdRank = document.createElement("td");
+        tdRank.textContent = "1";
+        tr.appendChild(tdRank);
+        const tdNames = document.createElement("td");
+        tdNames.textContent = row.name;
+        tr.appendChild(tdNames);
+        const tdTime = document.createElement("td");
+        tdTime.textContent = row.timeDelta;
+        tr.appendChild(tdTime);
 
         rankingsBody.appendChild(tr);
     });
