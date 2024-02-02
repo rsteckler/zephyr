@@ -18,12 +18,12 @@ function loadRankings () {
 function populateRankings (json) {
     // Populate Leaderboard
     const rankingsBody = document.querySelector("#rankings > tbody");
-
+    var ranking = 1;
     json.forEach((row) => {
         const tr = document.createElement("tr");
 
         const tdRank = document.createElement("td");
-        tdRank.textContent = "1";
+        tdRank.textContent = ranking++;
         tr.appendChild(tdRank);
         const tdNames = document.createElement("td");
         tdNames.textContent = row.name;
