@@ -29,7 +29,17 @@ function populateRankings (json) {
         tdNames.textContent = row.name;
         tr.appendChild(tdNames);
         const tdTime = document.createElement("td");
-        tdTime.textContent = row.timeDelta;
+        var timeString = "";
+        var timeDelta = row.timeDelta;
+        timeDelta /= 1000;
+        timeString += Math.floor(timeDelta / (60 * 60 * 24)) + "d ";
+        timeDelta -=  Math.floor(timeDelta / (60 * 60 * 24))
+        timeString += Math.floor(timeDelta / (60 * 60)) + "h ";
+        timeDelta -=  Math.floor(timeDelta / (60 * 60))
+        timeString += Math.floor(timeDelta / 60) + "m ";
+        timeDelta -=  Math.floor(timeDelta / 60)
+        timeString += Math.floor(timeDelta / 1000) + "s";
+        tdTime.textContent = timeString;
         tr.appendChild(tdTime);
 
         rankingsBody.appendChild(tr);
