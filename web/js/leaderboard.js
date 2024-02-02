@@ -32,13 +32,22 @@ function populateRankings (json) {
         var timeString = "";
         var timeDelta = row.timeDelta;
         timeDelta /= 1000;
-        timeString += Math.floor(timeDelta / (60 * 60 * 24)) + "d ";
-        timeDelta -=  Math.floor(timeDelta / (60 * 60 * 24))
-        timeString += Math.floor(timeDelta / (60 * 60)) + "h ";
-        timeDelta -=  Math.floor(timeDelta / (60 * 60))
-        timeString += Math.floor(timeDelta / 60) + "m ";
-        timeDelta -=  Math.floor(timeDelta / 60)
-        timeString += Math.floor(timeDelta / 1000) + "s";
+
+        const days = Math.floor(timeDelta / (60 * 60 * 24));
+        timeString += days + "d ";
+        timeDelta -=  days * (60 * 60 * 24);
+
+        const hours = Math.floor(timeDelta / (60 * 60));
+        timeString += hours + "h ";
+        timeDelta -=  hours * (60 * 60);
+
+        const minutes = Math.floor(timeDelta / 60);
+        timeString += minutes + "m ";
+        timeDelta -=  minutes * 60;
+
+        const seconds = timeDelta;
+        timeString += seconds + "s";
+
         tdTime.textContent = timeString;
         tr.appendChild(tdTime);
 
