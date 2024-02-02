@@ -6,14 +6,12 @@ document.addEventListener('DOMContentLoaded', function() {
         event.preventDefault(); // Prevent form submission
         
         var xhr = new XMLHttpRequest();
-        xhr.open('POST', 'https://api.karmahunt.net/endgame', true);
+        xhr.open('POST', 'https://api.karmahunt.net/addLeader', true);
         xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
         xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.onreadystatechange = function() {
             if (xhr.readyState === 4 && xhr.status === 200) {
-                var responseText = xhr.responseText;
-                var leaderboard = document.querySelector('#leaderboard');
-                leaderboard.textContent = responseText;
+                window.location.href = "leaderboard.js";
             } 
         };
         xhr.send('{"textbox": "' + textbox.value + '"}');
