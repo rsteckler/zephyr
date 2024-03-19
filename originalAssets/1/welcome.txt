@@ -1,0 +1,10 @@
+Hello Karmanauts,
+
+I love making scavenger hunts and always build them for my kids to find their birthday presents.  A few years ago, I made a digital scavenger hunt for my team and it ended up being a fun way to spend the morning for everyone.  This is a new version I put together that I'm inviting all of you to play.  Here are some rules/tips:
+1) It's mostly intended towards Software Engineers or tech-heavy employees.  There's a combination of math, engineering, coding, puzzles, and gaming.  It's possible to solve without technically writing any code, but if you aren't incredibly tech-savvy, you may want to team up with an Engineer.
+2) You can work as a team, but you'll split the reward at the end of the game.
+3) As much fun as real-world clues are, I wanted to make it available to all sites, so there's no need to be in a specific office location.
+4) Exploit however you see fit, but please don't break the game for others.  If you want to hex edit a binary file to find a password instead of solving the puzzle, go ahead.  I believe I've obfuscated and blocked any unreasonable exploits, so whatever you find is fair game.  Just don't shut down the servers, hack leaderboard databases, etc.  Nothing that impacts fairness or other people's experience.
+6) Enjoy :)
+
+<QRCode>
