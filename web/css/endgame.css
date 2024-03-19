@@ -1,0 +1,29 @@
+body {
+    background-color: #111111;
+    font-family: 'Orbitron', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+div {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    color: white;
+}
+
+button {
+    width: 100%;
+}
+
+#answerShowHideCorrect {
+    width: 60%;
+    margin-left: 20%;
+    visibility: hidden;
+}
+
+.hardToRead {
+    color: #222;
+}
