@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
     var form = document.querySelector('form');
-    var textbox = document.querySelector('input[name="textbox"]');
     
     form.addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent form submission
