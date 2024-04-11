@@ -28,7 +28,7 @@ const addLeader = function (name) {
     AWS.config.update(config.aws_remote_config);
     const docClient = new AWS.DynamoDB.DocumentClient();
     
-    const start = new Date(2024, 3, 11, 16, 0, 0, 0);
+    const start = new Date(2024, 3, 12, 16, 0, 0, 0);
     const now = new Date();
     const delta = now - start;
         
