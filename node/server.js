@@ -42,7 +42,7 @@ app.post('/buggie', (req, res) => {
     const data = '{"entity_id": "switch.template_switch"}';
     axios.post('https://home.ryansteckler.com/api/services/switch/turn_on', data, {
         headers: {
-            'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiIzY2VlODA2Njk1MDA0NWJkYjA0MTVhNDc0ODAzNzBiZSIsImlhdCI6MTcxMjg1MTY5NCwiZXhwIjoyMDI4MjExNjk0fQ.ZRDclnxO42nAMkevc6UiCQ6T8LoXGNgcbjm1F3HbZkM'
+            'Authorization': 'Bearer revoked'
         }
     })
         .then(response => {
